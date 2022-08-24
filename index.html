@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- FONT-AWESOME-KIT-LINK!! -->
+    <script
+      src="https://kit.fontawesome.com/20fa27540b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="calc.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <!-- divs responsible for the instructions pop-up -->
+      <div class="overlay"></div>
+
+      <div class="pop-up">
+        <h2>How to Use?</h2>
+      </div>
+      <div class="instructions">
+        <i class="fa-solid fa-xmark close-btn"></i>
+        <p>
+          Calculating gratuity or tip on a calculator is a simple
+          multiplication. Since the tip is figured as the bill times a
+          percentage you can do one calculation to find the total amount you'll
+          leave including tip. Use the rate 1 + tip percentage as a decimal and
+          multiply that by your check amount.
+        </p>
+      </div>
+
+      <!--logo -->
+      <div class="top">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+
+      <!-- beginning of calculator -->
+      <div class="calc">
+        <!-- input section of calculator -->
+        <div class="input">
+          <div class="bill-container">
+            <div class="label-wrapper">
+              <label for="inp-bill">Bill</label>
+            </div>
+
+            <div class="inp-wrapper">
+              <input
+                class="inp-text"
+                type="number"
+                name="inp-bill"
+                id="inp-bill"
+                placeholder="0.0"
+              />
+              <img src="./images/icon-dollar.svg" alt="dollar-icon" />
+            </div>
+          </div>
+
+          <div class="tip-container">
+            <div class="label-wrapper">
+              <label for="inp-tip"> Select Tip % </label>
+              <div class="error-msg2">Can't be zero</div>
+            </div>
+
+            <div class="btn-wrapper">
+              <button class="btn">5%</button>
+              <button class="btn">10%</button>
+              <button class="btn">15%</button>
+              <button class="btn">25%</button>
+              <button class="btn">50%</button>
+
+              <input
+                class="inp-text"
+                type="number"
+                name="inp-tip"
+                id="inp-tip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="people-container">
+            <div class="label-wrapper">
+              <label for="inp-people"> Number of People </label>
+              <div class="error-msg">Can't be zero</div>
+            </div>
+
+            <div class="inp-wrapper">
+              <input
+                class="inp-text"
+                type="number"
+                id="inp-people"
+                placeholder="1"
+              />
+              <img src="./images/icon-person.svg" alt="person-icon" />
+            </div>
+          </div>
+        </div>
+
+        <!-- output section of calculator -->
+        <div class="output">
+          <div class="line-wrapper">
+            <div class="title-wrapper">
+              <div class="line-dec">
+                <div class="title">Tip Amount</div>
+                <div class="desc">/ person</div>
+              </div>
+            </div>
+
+            <div class="value tip">$0.00</div>
+          </div>
+
+          <div class="line-wrapper">
+            <div class="title-wrapper">
+              <div class="line-dec">
+                <div class="title">Total</div>
+                <div class="desc">/ person</div>
+              </div>
+            </div>
+
+            <div class="value bill-total">$0.00</div>
+          </div>
+
+          <div class="output-btn">Reset</div>
+        </div>
+      </div>
+      <!-- End of calculator -->
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Boluwatife Olusanya</a>.
+      </div>
+    </main>
+    <script src="calc.js"></script>
+  </body>
+</html>
