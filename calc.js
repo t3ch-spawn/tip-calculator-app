@@ -19,7 +19,7 @@ const closeBtn = document.querySelector(".close-btn");
 // state variables
 let total = 0;
 let billValue = 0;
-let peopleValue = 1;
+let peopleValue = 0;
 let tipValue = 0;
 
 // creating event listeners that call the functions on the input elements
@@ -69,7 +69,7 @@ function tipInputFun() {
     addError(tipInput, errorMsg2, "exceed 10k");
   }
 
-  if (tipValue < 100) {
+  if (tipValue <= 100) {
     calcTip();
   }
 }
@@ -86,7 +86,9 @@ function peopleInputFun() {
     addError(peopleInput, errorMsg, "exceed 100");
   }
 
-  calcTip();
+  if (peopleValue <= 100) {
+    calcTip();
+  }
 }
 
 // enabling reset button
