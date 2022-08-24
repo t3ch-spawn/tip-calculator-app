@@ -59,6 +59,7 @@ main {
   border-radius: 10px;
   transition: 0.2s ease-in-out;
   opacity: 0;
+  font-size: 17px;
 }
 
 .instructions i {
