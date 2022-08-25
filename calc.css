@@ -195,6 +195,7 @@ input[type="number"] {
   transition: 0.3s ease-in-out;
   position: relative;
   border: 1px solid var(--Strong-cyan);
+  font-family: "Space Mono";
 }
 
 .btn-wrapper .btn:hover {
