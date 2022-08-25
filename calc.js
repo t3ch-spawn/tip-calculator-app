@@ -70,6 +70,11 @@ function billInputFun() {
 function tipInputFun() {
   tipValue = parseFloat(tipInput.value) / 100;
 
+  // removes any active background color on any button
+  btnPercentage.forEach((btn) => {
+    btn.classList.remove("active1");
+    btn.classList.remove("active2");
+  });
   // error message for custom-input
   if (tipValue <= 0) {
     addError(tipInput, errorMsg2, "be zero");
