@@ -36,7 +36,7 @@ tipInput.addEventListener("input", tipInputFun);
 function calcTip() {
   if (peopleValue >= 1 && billValue >= 1) {
     let amountTipped = (billValue * tipValue) / peopleValue;
-    total = (billValue + amountTipped) / peopleValue;
+    total = billValue / peopleValue + amountTipped;
     tipAmount.textContent = `$${amountTipped.toFixed(2)}`;
     billTotal.textContent = `$${total.toFixed(2)}`;
   }
