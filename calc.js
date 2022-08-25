@@ -115,6 +115,10 @@ reset.addEventListener("click", () => {
   tipInput.value = "";
   removeError(peopleInput, errorMsg);
   removeError(tipInput, errorMsg2);
+  total = 0;
+  billValue = 0;
+  peopleValue = 0;
+  tipValue = 0;
 });
 
 // function that adds the errors (error-function)
