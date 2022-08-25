@@ -32,6 +32,11 @@ billInput.addEventListener("input", billInputFun);
 peopleInput.addEventListener("input", peopleInputFun);
 tipInput.addEventListener("input", tipInputFun);
 
+// Enabling clicks on the iput elements that call the colorChange() function
+tipInput.addEventListener("click", colorChange);
+billInput.addEventListener("click", colorChange);
+peopleInput.addEventListener("click", colorChange);
+
 // calculating the tip
 function calcTip() {
   if (peopleValue >= 1 && billValue >= 1) {
@@ -44,8 +49,12 @@ function calcTip() {
 
 function percentageClick(event) {
   btnPercentage.forEach((btn) => {
+    // removes any active background color on any button
+    btn.classList.remove("active1");
+    btn.classList.remove("active2");
     if (event.target.textContent === btn.textContent) {
       tipValue = parseFloat(btn.textContent) / 100;
+      btn.classList.add("active1");
     }
   });
 
@@ -54,6 +63,7 @@ function percentageClick(event) {
 
 function billInputFun() {
   billValue = parseFloat(billInput.value);
+
   calcTip();
 }
 
@@ -128,3 +138,13 @@ overlay.addEventListener("click", () => {
   instructions.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+// function enabling color change of buttons
+function colorChange() {
+  btnPercentage.forEach((btn) => {
+    btn.classList.remove("active2");
+    if (btn.classList.contains("active1")) {
+      btn.classList.add("active2");
+    }
+  });
+}

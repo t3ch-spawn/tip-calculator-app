@@ -198,16 +198,23 @@ input[type="number"] {
   font-family: "Space Mono";
 }
 
+.btn-wrapper .btn.active1 {
+  cursor: pointer;
+  background-color: var(--Very-dark-cyan);
+  color: var(--Light-grayish-cyan);
+  border: none;
+}
+
 .btn-wrapper .btn:hover {
   cursor: pointer;
   background-color: var(--Very-dark-cyan);
-  color: var(--White);
+  color: var(--Light-grayish-cyan);
   border: none;
 }
-.btn-wrapper .btn:focus {
+.btn-wrapper .btn.active2 {
   cursor: pointer;
-  background-color: var(--Very-dark-cyan);
-  color: var(--White);
+  background-color: var(--Strong-cyan);
+  color: var(--Light-grayish-cyan);
   border: none;
 }
 
