@@ -15,6 +15,7 @@ const popUp = document.querySelector(".pop-up");
 const overlay = document.querySelector(".overlay");
 const instructions = document.querySelector(".instructions");
 const closeBtn = document.querySelector(".close-btn");
+const feMail = document.querySelector(".akjda");
 
 // state variables
 let total = 0;
@@ -59,6 +60,8 @@ function percentageClick(event) {
   });
 
   calcTip();
+
+  tipInput.value = "";
 }
 
 function billInputFun() {
